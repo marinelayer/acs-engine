@@ -26,6 +26,7 @@ spec:
         - "--service-account-private-key-file=/etc/kubernetes/certs/apiserver.key"
         - "--leader-elect=true"
         - "<kubernetesEnableRbac>"
+        - "--use-service-account-credentials"
         - "--v=2"
         - "--node-monitor-grace-period=<kubernetesCtrlMgrNodeMonitorGracePeriod>"
         - "--pod-eviction-timeout=<kubernetesCtrlMgrPodEvictionTimeout>"

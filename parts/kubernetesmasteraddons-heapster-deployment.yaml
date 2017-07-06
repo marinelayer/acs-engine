@@ -52,7 +52,6 @@ spec:
         operator: "Exists"
       serviceAccountName: heapster
       containers:
-        serviceAccountName: heapster
       - image: <kubernetesHeapsterSpec>
         command:
         - "/heapster"
@@ -101,7 +100,6 @@ spec:
         version: v1.4.0
       annotations:
         scheduler.alpha.kubernetes.io/critical-pod: ""
-        scheduler.alpha.kubernetes.io/tolerations: "[{\"key\":\"CriticalAddonsOnly\",\"operator\":\"Exists\"}]"
   selector:
     matchLabels:
       k8s-app: heapster
@@ -114,4 +112,3 @@ metadata:
     kubernetes.io/cluster-service: "true"
   namespace: kube-system
   name: heapster-v1.4.0
-

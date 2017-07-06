@@ -8,13 +8,8 @@ metadata:
     addonmanager.kubernetes.io/mode: Reconcile
 
 ---
-<<<<<<< HEAD
 apiVersion: apps/v1beta1
 kind: Deployment
-=======
-apiVersion: v1
-kind: ReplicationController
->>>>>>> Add kube-dns rolebindings.
 metadata:
   labels:
     kubernetes.io/cluster-service: "true"
