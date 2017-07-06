@@ -52,6 +52,7 @@ spec:
         operator: "Exists"
       serviceAccountName: heapster
       containers:
+        serviceAccountName: heapster
       - image: <kubernetesHeapsterSpec>
         command:
         - "/heapster"
@@ -93,3 +94,24 @@ spec:
           name: MY_POD_NAMESPACE
       nodeSelector:
         beta.kubernetes.io/os: linux
+    metadata:
+      labels:
+        task: monitoring
+        k8s-app: heapster
+        version: v1.4.0
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ""
+        scheduler.alpha.kubernetes.io/tolerations: "[{\"key\":\"CriticalAddonsOnly\",\"operator\":\"Exists\"}]"
+  selector:
+    matchLabels:
+      k8s-app: heapster
+      version: v1.4.0
+apiVersion: extensions/v1beta1
+metadata:
+  labels:
+    k8s-app: heapster
+    version: v1.4.0
+    kubernetes.io/cluster-service: "true"
+  namespace: kube-system
+  name: heapster-v1.4.0
+
