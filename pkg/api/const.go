@@ -61,10 +61,13 @@ const (
 	Kubernetes162 string = "1.6.2"
 	// Kubernetes166 is the string constant for Kubernetes 1.6.6
 	Kubernetes166 string = "1.6.6"
-	// Kubernetes166 is the string constant for Kubernetes 1.7.0
+	// Kubernetes170 is the string constant for Kubernetes 1.7.0
 	Kubernetes170 string = "1.7.0"
-	// Kubernetes166 is the string constant for Kubernetes 1.7.1
+	// Kubernetes171 is the string constant for Kubernetes 1.7.1
 	Kubernetes171 string = "1.7.1"
+	// Kubernetes172 is the string constant for Kubernetes 1.7.2
+	Kubernetes172 string = "1.7.2"
+
 	// KubernetesDefaultVersion is the string constant for current Kubernetes version
 	KubernetesDefaultVersion string = Kubernetes166
 )
